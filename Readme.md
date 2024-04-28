@@ -4,7 +4,7 @@
 -   In-memory H2 database
 
 
-##Requirements
+## Requirements
 - Java 11 ( build and tested with OpenJDK 11 )
 - Maven ( build and tested with 3.5.4 )
 

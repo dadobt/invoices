@@ -8,7 +8,7 @@
 - Java 11 ( build and tested with OpenJDK 11 )
 - Maven ( build and tested with 3.5.4 )
 
-##Build the application and run the application
+## Build the application and run the application
 
 Navigate to the root of the application (where `pom.xml` is) and execute
 

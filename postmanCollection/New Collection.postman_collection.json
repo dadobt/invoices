@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "eda87c34-6784-4f48-afc5-511ccc19bffb",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "1864890"
+	},
+	"item": [
+		{
+			"name": "Create Supplier",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"user\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/authenticate"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Invoice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": "<string>",
+							"description": "(Required) ",
+							"type": "text"
+						},
+						{
+							"key": "invoice",
+							"value": "[object Object]",
+							"description": "(Required) ",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{baseUrl}}/api/invoice/create"
+			},
+			"response": [
+				{
+					"name": "Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"description": "Added as a part of security scheme: bearer",
+								"key": "Authorization",
+								"value": "Bearer <token>"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "<string>",
+									"description": "(Required) ",
+									"type": "text"
+								},
+								{
+									"key": "invoice",
+									"value": "[object Object]",
+									"description": "(Required) ",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/invoice/create"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "*/*"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				},
+				{
+					"name": "Forbidden",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"description": "Added as a part of security scheme: bearer",
+								"key": "Authorization",
+								"value": "Bearer <token>"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "<string>",
+									"description": "(Required) ",
+									"type": "text"
+								},
+								{
+									"key": "invoice",
+									"value": "[object Object]",
+									"description": "(Required) ",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/invoice/create"
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "*/*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"errorCode\": \"<integer>\",\n  \"description\": \"<string>\"\n}"
+				},
+				{
+					"name": "Internal Server Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"description": "Added as a part of security scheme: bearer",
+								"key": "Authorization",
+								"value": "Bearer <token>"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "<string>",
+									"description": "(Required) ",
+									"type": "text"
+								},
+								{
+									"key": "invoice",
+									"value": "[object Object]",
+									"description": "(Required) ",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}/api/invoice/create"
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "*/*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"errorCode\": \"<integer>\",\n  \"description\": \"<string>\"\n}"
+				}
+			]
+		},
+		{
+			"name": "authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"user\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/authenticate"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Contract For Supplier",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"user\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/authenticate"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Contracts for Supplier",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNzE0MjU2Njk1LCJpYXQiOjE3MTQyNTMwOTV9.5RB6fcKywHKaba90QEA995bKQU5ZRY4PV6ixfpgR1bc"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  { \r\n    \"name\":\"test\",\r\n     \"description\":\"test description\",\r\n     \"signed\":\"2024-04-24T14:28:00.131Z\",\r\n     \"expires\":\"2024-04-28T14:28:00.131Z\",\r\n     \"supplierID\":\"1\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/supplier/1id/get/contract"
+			},
+			"response": []
+		},
+		{
+			"name": "Get SupplierById",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-length": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNzE0MTM1MjA5LCJpYXQiOjE3MTQxMzE2MDl9.9UOrm2G7PrxHA597y2_95KIR7qvnmLpjJqHfIx1zGno"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "localhost:8080/api/supplier/1"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllinvoicesBySupplier",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-length": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNzE0MTM1MjA5LCJpYXQiOjE3MTQxMzE2MDl9.9UOrm2G7PrxHA597y2_95KIR7qvnmLpjJqHfIx1zGno"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "localhost:8080/api/supplier/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Count invoice numbers invoices Number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/supplier/1/get/invoicesNumber"
+			},
+			"response": []
+		},
+		{
+			"name": "Invoices in due days DueDays",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNzE0MjYxMTcwLCJpYXQiOjE3MTQyNTc1NzB9.tImxUJgnWwudpZFzZXy4Il-O_SGj4j1z-ce9Ig9Nnjk"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "localhost:8080/api/invoice/duedays/10"
+			},
+			"response": []
+		},
+		{
+			"name": "Total Amount per Supplier",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNzE0MzIwNDEyLCJpYXQiOjE3MTQzMTY4MTJ9.QktNB_bkVK8fEMtwi9frJUVj1RItFXwFtPmgE8I1zQg"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "localhost:8080/api/invoice/supplier/1/total"
+			},
+			"response": []
+		}
+	]
+}
